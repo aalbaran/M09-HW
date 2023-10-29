@@ -1,0 +1,39 @@
+test_1_add_book (__main__.BookLoverTestSuite.test_1_add_book) ... ok
+test_2_add_book (__main__.BookLoverTestSuite.test_2_add_book) ... ERROR
+test_3_has_read (__main__.BookLoverTestSuite.test_3_has_read) ... ok
+test_4_has_read (__main__.BookLoverTestSuite.test_4_has_read) ... ok
+test_5_num_books_read (__main__.BookLoverTestSuite.test_5_num_books_read) ... ERROR
+test_6_fav_books (__main__.BookLoverTestSuite.test_6_fav_books) ... ERROR
+
+======================================================================
+ERROR: test_2_add_book (__main__.BookLoverTestSuite.test_2_add_book)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\aalbaran\Documents\UVA\MSDS\ProgrammingforDataScience\M08PythonTesting\booklover_test.py", line 18, in test_2_add_book
+    test_2.add_book("Jane Eyre", 4)
+  File "C:\Users\aalbaran\Documents\UVA\MSDS\ProgrammingforDataScience\M08PythonTesting\bookLover.py", line 28, in add_book
+    self.book_list = pd.concat([self.book_list, new_book], ignore_index=True)
+                                                ^^^^^^^^
+UnboundLocalError: cannot access local variable 'new_book' where it is not associated with a value
+
+======================================================================
+ERROR: test_5_num_books_read (__main__.BookLoverTestSuite.test_5_num_books_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\aalbaran\Documents\UVA\MSDS\ProgrammingforDataScience\M08PythonTesting\booklover_test.py", line 41, in test_5_num_books_read
+    self.assertEqual(self.test_5.num_books_read(), 2)
+                     ^^^^^^^^^^^
+AttributeError: 'BookLoverTestSuite' object has no attribute 'test_5'
+
+======================================================================
+ERROR: test_6_fav_books (__main__.BookLoverTestSuite.test_6_fav_books)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\aalbaran\Documents\UVA\MSDS\ProgrammingforDataScience\M08PythonTesting\booklover_test.py", line 51, in test_6_fav_books
+    self.assertTrue(is_greater_than_3 = (new['book_rating'] > 3).all())
+TypeError: TestCase.assertTrue() got an unexpected keyword argument 'is_greater_than_3'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+FAILED (errors=3)
