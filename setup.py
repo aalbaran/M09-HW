@@ -8,6 +8,6 @@ setup(
     author='Angela Albarano',
     author_email='maa5em@virginia.edu',
     license='MIT',
-    packages=['myPkg']
+    packages=['myBookLoverPkg']
 
 )

@@ -37,11 +37,11 @@ class BookLover:
     def fav_books(self):
         return self.book_list[self.book_list['book_rating']>3]
 
-    if __name__ == '__main__':
-        test_object = BookLover("Han Solo", "hsolo@millenniumfalcon.com", "scifi")
-        test_object.add_book("War of the Worlds", 4)
-        test_object.add_book("The Divine Comedy", 5)
-        test_object.add_book("Fight Club", 3)
-        test_object.num_books_read()
-        test_object.fav_books()
+if __name__ == '__main__':
+    test_object = BookLover("Han Solo", "hsolo@millenniumfalcon.com", "scifi")
+    test_object.add_book("War of the Worlds", 4)
+    test_object.add_book("The Divine Comedy", 5)
+    test_object.add_book("Fight Club", 3)
+    test_object.num_books_read()
+    test_object.fav_books()
  
